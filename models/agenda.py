@@ -52,10 +52,7 @@ class AgendaModel(db.Model):
 
         return cls.query.filter_by(id=id).first()
 
-
-
-
-
 class AgendaSchema(ma.Schema):
     class Meta:
         fields =('id','title','agenda')
+        
