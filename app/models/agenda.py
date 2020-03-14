@@ -1,5 +1,5 @@
 from main import db, ma
-# from functools import 
+
 
 class AgendaModel(db.Model):
     __tablename = 'agendas'

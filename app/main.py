@@ -4,22 +4,12 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow 
 from config.pygconfig import DevelopmentConfig
 from werkzeug.security import generate_password_hash
-# from functools import wraps
+
 
 from config.pygconfig import DevelopmentConfig
 
 app = Flask(__name__)
 
-# # decorator for basic authentication
-# def protected(f):
-#     @wraps(f)
-#     def decorated(*args, **kwargs):
-#         auth = request.authorization
-#         if auth and auth.username == api.username and auth.password == api.password:
-#             return f(*args, **kwargs)
-#         else:
-#             return jsonify({'Message':'Authentication Failed'}), 403
-#     return decorated
 
 app.config.from_object(DevelopmentConfig)
 
