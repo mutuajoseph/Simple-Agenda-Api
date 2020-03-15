@@ -46,11 +46,11 @@ from models.agenda import AgendaModel,AgendaSchema
 from models.users import UserModel,UserSchema
 
 # serialize the data 
-user_schema = UserSchema(strict=True)
-users_schema = UserSchema(many=True, strict=True)
+user_schema = UserSchema()
+users_schema = UserSchema(many=True)
 
-agenda_schema = AgendaSchema(strict=True)
-agendas_schema = AgendaSchema(many=True,strict=True)
+agenda_schema = AgendaSchema()
+agendas_schema = AgendaSchema(many=True)
 
 # create the tables before any request is handled
 @app.before_first_request
