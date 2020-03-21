@@ -6,12 +6,12 @@ from config.pygconfig import DevelopmentConfig
 from werkzeug.security import generate_password_hash
 
 
-from config.pygconfig import DevelopmentConfig
+from config.pygconfig import DevelopmentConfig, ProductionConfig
 
 app = Flask(__name__)
 
 
-app.config.from_object(DevelopmentConfig)
+app.config.from_object(ProductionConfig)
 
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
