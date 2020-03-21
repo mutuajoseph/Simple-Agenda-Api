@@ -9,4 +9,5 @@ class DevelopmentConfig(Config):
 
 class ProductionConfig(Config):
     DEBUG=False
+    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:wamzy@172.17.0.1:5432/mydatabase'
     SECRET_KEY = 'SOME-RANDOM-KEY'
